@@ -1,10 +1,10 @@
 // parent class
 class Ninja {
-  constructor(name) {
+  constructor(name, health = 10, speed = 3, strength = 3) {
     this.name = name;
-    this.health = 0;
-    this.speed = 3;
-    this.strength = 3;
+    this.health = health;
+    this.speed = speed;
+    this.strength = strength;
   }
 
   // method, logs a ninja name
@@ -30,12 +30,12 @@ class Ninja {
 
 // child Sensei class
 class Sensei extends Ninja {
-  constructor(name) {
+  constructor(name, health = 200, speed = 10, strength = 10, wisdom = 10) {
     super(name);
-    this.health = 200;
-    this.speed = 10;
-    this.strength = 10;
-    this.wisdom = 10;
+    this.health = health;
+    this.speed = speed;
+    this.strength = strength;
+    this.wisdom = wisdom;
   }
 
   // method, calls Ninja method drinkSake then logs a "wise" message
